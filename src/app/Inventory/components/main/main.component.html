@@ -1,11 +1,30 @@
 <body>
-    <header routerLink="/home">Home</header>  
-    <app-subdropdown  title="CUSTEMER INTERFACE" [items]="aboutItems">Hello</app-subdropdown>
-    <app-subdropdown title="ORDER MANAGEMENT" [items]="servicesItems"></app-subdropdown>
-    <app-subdropdown title="TRANSPORTATION AND ASSETS" [items]="partnersItems"></app-subdropdown>
-    <app-subdropdown title="WAREHOSEING AND INVENTORY MANAGEMENT" [items]="partnersItems"></app-subdropdown>
+    <header routerLink="/home">Home</header>
+    <div class="grid">
 
-    <!-- <a routerLink="/contact">Contact</a> -->
+        <div class="valustream">
+            <p style="font-weight: 300px;">SELECT VALUE STREAM</p>
+            <div class="leftbuttons" *ngFor="let button of buttons">
+                <button class="button-35" style="text-align: start;"
+                    (click)="getsubheaders(button)">{{button.name}}</button>
+            </div>
+        </div>
+
+        <div>
+            <div class="ImageEnabled" *ngFor="let button of buttons">
+                <div *ngIf="button.img">
+                    <img src="{{button.img}}" alt="Industry Placeholder Image" class="responsive-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="valustream">
+            <p style="font-weight: 300px;">SELECT CAPABILITY</p>
+            <div *ngIf="data" style="margin-top: 20px;">
+                <app-subdropdown class="subbutton-container" [items]="servicesItems">
+                </app-subdropdown>
+            </div>
+        </div>
+
+    </div>
 </body>
-  
-  

@@ -3,22 +3,16 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { MainComponent } from './components/main/main.component';
-import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { HeaderComponent } from './components/header/header.component';
+
 import { SubDropdownComponent } from './components/sub-dropdown/sub-dropdown.component';
 
 @NgModule({
-  declarations: [
-    MainComponent,
-    DropdownComponent,
-    SubDropdownComponent
-  ],
+  declarations: [MainComponent, HeaderComponent, SubDropdownComponent],
   imports: [
     CommonModule,
-    RouterModule  // Import RouterModule for routing functionalities
+    RouterModule, // Import RouterModule for routing functionalities
   ],
-  exports: [
-    MainComponent,
-    DropdownComponent
-  ]
+  exports: [MainComponent, HeaderComponent],
 })
-export class InventoryModule { }
+export class InventoryModule {}

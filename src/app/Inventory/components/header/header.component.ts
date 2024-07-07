@@ -3,10 +3,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'header',
-  templateUrl: './dropdown.component.html',
-  styleUrls: ['./dropdown.component.css']
+  templateUrl: './header.component.html',
+  styleUrls: ['./header.component.css'],
 })
-export class DropdownComponent {
+export class HeaderComponent {
   showSubmenu = false;
 
   toggleSubmenu() {
