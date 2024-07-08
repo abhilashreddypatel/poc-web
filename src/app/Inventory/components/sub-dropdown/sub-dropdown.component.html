@@ -1,5 +1,6 @@
 <div class="">
-  <div *ngFor="let item of items" class="subbutton-wrapper">
+  <div *ngFor="let item of items let i=index" class="subbutton-wrapper">
     <button class="subbuttons button-35" [routerLink]="item.link">{{ item.label }}</button>
+    <div class="custom-separator" *ngIf="item != null"></div>
   </div>
 </div>

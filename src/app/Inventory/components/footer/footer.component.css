@@ -1,0 +1,94 @@
+/* Footer styles */
+.pmd-footer {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+  height: 80px;
+  color: #333;
+}
+
+.pmd-footer .pmd-footer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pmd-footer .pmd-footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.pmd-footer .pmd-footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.pmd-footer .pmd-footer-links a {
+  color: #333;
+  text-decoration: none;
+}
+
+.pmd-footer .pmd-footer-links a:hover {
+  text-decoration: underline;
+}
+
+.pmd-footer .pmd-footer-site-info {
+  font-size: 0.875rem;
+  margin-top: 1rem;
+  color: #666;
+}
+
+/* Visit us on section styles */
+.pmd-visit-us {
+  background-color: #343a40;
+  padding: 2rem 0;
+  color: #ffffff;
+  text-align: center;
+}
+
+.pmd-visit-us .pmd-footer-sub-title {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.pmd-visit-us .pmd-display4 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.pmd-visit-us .pmd-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.pmd-visit-us .pmd-social-icons button {
+  background-color: #ffffff;
+  color: #343a40;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pmd-visit-us .pmd-social-icons button:hover {
+  background-color: #dcdcdc;
+}
+
+.pmd-visit-us .pmd-social-icons i {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pmd-visit-us .pmd-social-icons i svg {
+  fill: #343a40;
+  width: 24px;
+  height: 24px;
+}

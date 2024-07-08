@@ -10,6 +10,8 @@ import { Data } from '@angular/router';
 export class MainComponent implements OnInit {
   data: boolean = true;
 
+  selectedButtonId: number | null = null;
+
   buttons = [
     {
       id: 1,
@@ -21,16 +23,22 @@ export class MainComponent implements OnInit {
       name: 'ORDER MANAGEMENT',
       img: '',
     },
-    { id: 3, name: 'TRANSPORTATION AND ASSET MANAGEMENT' },
-    { id: 4, name: 'WAREHOSEING AND INVENTORY MANAGEMENT' },
+    { id: 3, name: 'TRANSPORTATION AND ASSET MANAGEMENT', img: '' },
+    { id: 4, name: 'WAREHOSEING AND INVENTORY MANAGEMENT', img: '' },
   ];
 
   aboutItems: { label: string; link: string }[] | undefined;
   servicesItems: { label: string; link: string }[] | undefined;
   partnersItems: { label: string; link: string }[] | undefined;
 
-  ngOnInit(): void {}
-
+  ngOnInit(): void {
+    this.servicesItems = [];
+    this.resetimage();
+  }
+  toggleSelectedButton(buttonId: number) {
+    this.selectedButtonId =
+      this.selectedButtonId === buttonId ? null : buttonId;
+  }
   getsubheaders(data: any) {
     console.log(data.id);
 
@@ -59,6 +67,8 @@ export class MainComponent implements OnInit {
     }
 
     if (data.id === 3) {
+      data.img =
+        'https://fedex-dims.brightspotgocdn.com/dims4/default/12c6e42/2147483647/strip/true/crop/3000x1689+0+156/resize/1000x563!/format/webp/quality/90/?url=https%3A%2F%2Ffedex-static.brightspotgocdn.com%2F1a%2F92%2F4e85381647919b6cf66dba2c01f8%2F220512-ev-sameday-city-truck-029.jpg';
       this.servicesItems = [
         {
           label: 'Arrange & Coordinate Coneyance, Shipments, Assets',

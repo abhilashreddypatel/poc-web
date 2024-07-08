@@ -6,9 +6,15 @@ import { MainComponent } from './components/main/main.component';
 import { HeaderComponent } from './components/header/header.component';
 
 import { SubDropdownComponent } from './components/sub-dropdown/sub-dropdown.component';
+import { FooterComponent } from './components/footer/footer.compoent';
 
 @NgModule({
-  declarations: [MainComponent, HeaderComponent, SubDropdownComponent],
+  declarations: [
+    MainComponent,
+    HeaderComponent,
+    SubDropdownComponent,
+    FooterComponent,
+  ],
   imports: [
     CommonModule,
     RouterModule, // Import RouterModule for routing functionalities
