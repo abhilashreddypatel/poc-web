@@ -1,0 +1,37 @@
+<body>
+    <header routerLink="/home">Home</header>
+    <div class="grid">
+
+        <div class="valustream">
+            <p style="font-weight: bold; padding-left: 20px;">SELECT VALUE STREAM</p>
+            <div class="leftbuttons" *ngFor="let button of buttons; let i = index">
+                <button class="button-35" style="text-align: start;" (click)="getsubheaders(button)"
+                    [class.selected]="selectedButtonId === button.id"
+                    (click)="toggleSelectedButton(button.id)">{{button.name}}
+                </button>
+                <span class="checkmark" *ngIf="selectedButtonId === button.id">&#10004;</span>
+                <div class="custom-separator" *ngIf="i < buttons.length - 1"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="ImageEnabled" *ngFor="let button of buttons">
+                <div *ngIf="button.img">
+                    <img src="{{button.img}}" alt="Industry Placeholder Image" class="responsive-img">
+                </div>
+            </div>
+        </div>
+
+        <div class="valustream">
+            <p style="font-weight: bold; text-align: center;">SELECT CAPABILITY</p>
+            <div *ngIf="data" style="margin-top: 20px;">
+                <app-subdropdown class="subbutton-container" [items]="servicesItems">
+                </app-subdropdown>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+<footer></footer>
