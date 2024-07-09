@@ -1,6 +1,6 @@
 <div class="">
   <div *ngFor="let item of items let i=index" class="subbutton-wrapper">
-    <button class="subbuttons button-35" [routerLink]="item.link" ro>{{ item.label }}</button>
+    <button class="subbuttons button-35" (click)="viewsubdata(item)">{{ item.label }} </button>
     <div class="custom-separator" *ngIf="item != null"></div>
   </div>
 </div>

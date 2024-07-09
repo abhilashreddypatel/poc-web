@@ -8,7 +8,7 @@ import { inboundmanagementComponent } from './warehouse-management/inbound-manag
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'inboundmanagement', component: inboundmanagementComponent },
+  // { path: 'inboundmanagement', component: inboundmanagementComponent },
 ];
 
 @NgModule({

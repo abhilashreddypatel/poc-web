@@ -16,8 +16,15 @@
 
         <div>
             <div class="ImageEnabled" *ngFor="let button of buttons">
-                <div *ngIf="button.img">
+                <div *ngIf="(button.img && !servicesItems)">
                     <img src="{{button.img}}" alt="Industry Placeholder Image" class="responsive-img">
+                </div>
+            </div>
+
+            <div>
+                <div *ngFor="let data of servicesItems">
+                    <img src="{{data.url}}" alt="">
+                    <!-- <div class="button-35">{{data.label}}</div> -->
                 </div>
             </div>
         </div>

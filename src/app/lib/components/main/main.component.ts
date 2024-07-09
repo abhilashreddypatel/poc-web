@@ -9,8 +9,10 @@ import { Data } from '@angular/router';
 })
 export class MainComponent implements OnInit {
   data: boolean = true;
-
+  Showsubbuttonimg: boolean = false;
   selectedButtonId: number | null = null;
+
+  // message: string | undefined;
 
   buttons = [
     {
@@ -28,7 +30,7 @@ export class MainComponent implements OnInit {
   ];
 
   aboutItems: { label: string; link: string }[] | undefined;
-  servicesItems: { label: string; link: string }[] | undefined;
+  servicesItems: { label: string; link: string; url: string }[] | undefined;
   partnersItems: { label: string; link: string }[] | undefined;
 
   ngOnInit(): void {
@@ -49,11 +51,31 @@ export class MainComponent implements OnInit {
       data.img =
         'https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png';
       this.servicesItems = [
-        { label: 'Customer Acquisition', link: '/bring' },
-        { label: 'Customer Onboarding', link: '/deliver' },
-        { label: 'Customer Onboarding', link: '/package' },
-        { label: 'Customer Support', link: '/express' },
-        { label: 'Customer Loyalty Programs', link: '/express' },
+        {
+          label: 'Customer Acquisition',
+          link: '/bring',
+          url: '',
+        },
+        {
+          label: 'Customer Onboarding',
+          link: '/deliver',
+          url: '',
+        },
+        {
+          label: 'Customer Onboarding',
+          link: '/package',
+          url: '',
+        },
+        {
+          label: 'Customer Support',
+          link: '/express',
+          url: '',
+        },
+        {
+          label: 'Customer Loyalty Programs',
+          link: '/express',
+          url: '',
+        },
       ];
     }
 
@@ -61,8 +83,16 @@ export class MainComponent implements OnInit {
       data.img =
         'https://acme-world.com/app/default/assets/addons/default/np/site-theme/resources/img/img-industry-placeholder.png';
       this.servicesItems = [
-        { label: 'Receive & Process Customer Orders', link: '/company' },
-        { label: 'Manage order visibility & Tracking', link: '/team' },
+        {
+          label: 'Receive & Process Customer Orders',
+          link: '/company',
+          url: '',
+        },
+        {
+          label: 'Manage order visibility & Tracking',
+          link: '/team',
+          url: '',
+        },
       ];
     }
 
@@ -73,10 +103,23 @@ export class MainComponent implements OnInit {
         {
           label: 'Arrange & Coordinate Coneyance, Shipments, Assets',
           link: '/link1',
+          url: '',
         },
-        { label: 'Track Conveyance, Shipments & Assets', link: '/link2' },
-        { label: 'Fleet Management', link: '/link3' },
-        { label: 'P&D Optimization', link: '/link4' },
+        {
+          label: 'Track Conveyance, Shipments & Assets',
+          link: '/link2',
+          url: '',
+        },
+        {
+          label: 'Fleet Management',
+          link: '/link3',
+          url: '',
+        },
+        {
+          label: 'P&D Optimization',
+          link: '/link4',
+          url: '',
+        },
       ];
     }
     if (data.id === 4) {
@@ -84,10 +127,23 @@ export class MainComponent implements OnInit {
         {
           label: 'INBOUND-MANAGEMENT',
           link: '/inboundmanagement',
+          url: '',
         },
-        { label: 'INVENTORY MANAGEMENT', link: '/inventorymanagement' },
-        { label: 'OUTBOUND MANAGEMENT', link: '/outboundmanagement' },
-        { label: 'RETURNS MANGEMENT', link: '/returnsmanagement' },
+        {
+          label: 'INVENTORY MANAGEMENT',
+          link: '/inventorymanagement',
+          url: '',
+        },
+        {
+          label: 'OUTBOUND MANAGEMENT',
+          link: '/outboundmanagement',
+          url: '',
+        },
+        {
+          label: 'RETURNS MANGEMENT',
+          link: '/returnsmanagement',
+          url: '',
+        },
       ];
     }
   }
@@ -98,5 +154,10 @@ export class MainComponent implements OnInit {
         button.img = '';
       }
     });
+  }
+
+  viewsubdata() {
+    this.Showsubbuttonimg = true;
+    this.aboutItems = [];
   }
 }
