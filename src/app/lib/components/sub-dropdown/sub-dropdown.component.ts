@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-subdropdown',
@@ -6,6 +7,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   //   styleUrls: ['./subnav.component.css']
 })
 export class SubDropdownComponent {
+  constructor(private route: Router) {}
+
   @Input() title: string | undefined;
   @Input() items: { label: string; link: string; url?: string }[] | undefined;
 
@@ -34,5 +37,9 @@ export class SubDropdownComponent {
         'https://www.vantec-gl.com/solution/scm/img/pc_inbound_im01.png';
     }
     // data.url = '';
+  }
+
+  selectLabel(sel: any) {
+    this.route.navigate(['/inboundmanagement']);
   }
 }
