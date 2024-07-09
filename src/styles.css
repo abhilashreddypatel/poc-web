@@ -74,6 +74,7 @@
   grid-template-rows: 1fr;
   width: 100%; */
   margin-bottom: 10px;
+  max-width: 300px;
   /* padding-bottom: 20px; */
   /* position: fixed;  */
 }
@@ -83,13 +84,14 @@
   align-items: end;
   align-items: flex-end;
   /* width: 80px; */
-  max-width: 90%;
+  max-width: 300px;
 }
 
 .subbutton-wrapper {
   /* width: 50%; */
   margin-top: 20px;
   text-align: end;
+  max-width: 300px;
 }
 
 .subbuttons {

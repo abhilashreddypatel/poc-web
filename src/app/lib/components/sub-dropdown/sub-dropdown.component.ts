@@ -9,8 +9,9 @@ export class SubDropdownComponent {
   @Input() title: string | undefined;
   @Input() items: { label: string; link: string; url?: string }[] | undefined;
 
-  // @Output() notify: EventEmitter<string> = new EventEmitter<string>();
-  Showsubbuttonimg: boolean = false;
+  @Output() Showsubbuttonimg: EventEmitter<boolean> =
+    new EventEmitter<boolean>();
+  // Showsubbuttonimg: boolean = false;
 
   //   items = [
   //     { label: 'Item 1', link: '/item1' },
@@ -18,11 +19,20 @@ export class SubDropdownComponent {
   //   ];
   viewsubdata(data: any) {
     console.log(data);
-    this.Showsubbuttonimg = true;
+    this.Showsubbuttonimg.emit(true);
     if (data.label === 'INBOUND-MANAGEMENT') {
-      // this.notify.emit('hello i am abhi');
+      data.url =
+        'https://www.vantec-gl.com/solution/scm/img/pc_inbound_im01.png';
+    } else if (data.label === 'INVENTORY MANAGEMENT') {
+      data.url =
+        'https://www.vantec-gl.com/solution/scm/img/pc_inbound_im01.png';
+    } else if (data.label === 'OUTBOUND MANAGEMENT') {
+      data.url =
+        'https://www.vantec-gl.com/solution/scm/img/pc_inbound_im01.png';
+    } else if (data.label === 'RETURNS MANAGEMENT') {
       data.url =
         'https://www.vantec-gl.com/solution/scm/img/pc_inbound_im01.png';
     }
+    // data.url = '';
   }
 }

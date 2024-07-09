@@ -5,14 +5,12 @@ import { Data } from '@angular/router';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
-  //   styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
   data: boolean = true;
-  Showsubbuttonimg: boolean = false;
+  Showsubbuttonimg: boolean | undefined;
   selectedButtonId: number | null = null;
-
-  // message: string | undefined;
 
   buttons = [
     {
@@ -29,7 +27,7 @@ export class MainComponent implements OnInit {
     { id: 4, name: 'WAREHOSEING AND INVENTORY MANAGEMENT', img: '' },
   ];
 
-  aboutItems: { label: string; link: string }[] | undefined;
+  // aboutItems: { label: string; link: string }[] | undefined;
   servicesItems: { label: string; link: string; url: string }[] | undefined;
   partnersItems: { label: string; link: string }[] | undefined;
 
@@ -38,8 +36,8 @@ export class MainComponent implements OnInit {
     this.resetimage();
   }
   toggleSelectedButton(buttonId: number) {
-    this.selectedButtonId =
-      this.selectedButtonId === buttonId ? null : buttonId;
+    // this.selectedButtonId =
+    this.selectedButtonId === buttonId ? null : buttonId;
   }
   getsubheaders(data: any) {
     console.log(data.id);
@@ -123,6 +121,8 @@ export class MainComponent implements OnInit {
       ];
     }
     if (data.id === 4) {
+      data.img =
+        'https://acme-world.com/app/default/assets/addons/default/np/site-theme/resources/img/img-industry-placeholder.png';
       this.servicesItems = [
         {
           label: 'INBOUND-MANAGEMENT',
@@ -158,6 +158,6 @@ export class MainComponent implements OnInit {
 
   viewsubdata() {
     this.Showsubbuttonimg = true;
-    this.aboutItems = [];
+    // this.aboutItems = [];
   }
 }

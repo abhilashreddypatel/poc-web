@@ -14,17 +14,21 @@
             </div>
         </div>
 
-        <div>
+        <div class="middlecontainer">
             <div class="ImageEnabled" *ngFor="let button of buttons">
-                <div *ngIf="(button.img && !servicesItems)">
-                    <img src="{{button.img}}" alt="Industry Placeholder Image" class="responsive-img">
+                <div *ngIf="(button.img && !Showsubbuttonimg)">
+                    <img style="display: block; margin: auto;" src="{{button.img}}" alt="Industry Image"
+                        class="responsive-img">
                 </div>
             </div>
 
-            <div>
+            <div *ngIf="Showsubbuttonimg">
                 <div *ngFor="let data of servicesItems">
-                    <img src="{{data.url}}" alt="">
-                    <!-- <div class="button-35">{{data.label}}</div> -->
+                    <img style="display: block; margin: auto;" src="{{data.url}}">
+                    <div *ngIf="data.label === 'INBOUND-MANAGEMENT'">
+                        <button class="button-57" style="text-align: center;"
+                            alt="Click to Redirect">{{data.label}}</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -32,7 +36,7 @@
         <div class="valustream">
             <p style="font-weight: bold; text-align: center;">SELECT CAPABILITY</p>
             <div *ngIf="data" style="margin-top: 20px;">
-                <app-subdropdown class="subbutton-container" [items]="servicesItems">
+                <app-subdropdown class="subbutton-container" [items]="servicesItems" (Showsubbuttonimg)="viewsubdata()">
                 </app-subdropdown>
             </div>
         </div>
