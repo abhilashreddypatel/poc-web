@@ -1,6 +1,6 @@
 // src/app/main/main.component.ts
 import { Component, OnInit } from '@angular/core';
-import { Data } from '@angular/router';
+import { Data, Router } from '@angular/router';
 
 @Component({
   selector: 'app-main',
@@ -8,6 +8,8 @@ import { Data } from '@angular/router';
   styleUrls: ['./main.component.css'],
 })
 export class MainComponent implements OnInit {
+  constructor(private route: Router) {}
+
   data: boolean = true;
   Showsubbuttonimg: boolean | undefined;
   selectedButtonId: number | null = null;
@@ -159,5 +161,8 @@ export class MainComponent implements OnInit {
   viewsubdata() {
     this.Showsubbuttonimg = true;
     // this.aboutItems = [];
+  }
+  redirect(data: any) {
+    this.route.navigate(['/inboundmanagement']);
   }
 }

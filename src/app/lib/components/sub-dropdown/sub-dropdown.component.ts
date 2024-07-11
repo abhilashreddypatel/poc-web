@@ -23,6 +23,7 @@ export class SubDropdownComponent {
   viewsubdata(data: any) {
     console.log(data);
     this.Showsubbuttonimg.emit(true);
+    // this.selectLabel(data.label);
     if (data.label === 'INBOUND-MANAGEMENT') {
       data.url =
         'https://www.vantec-gl.com/solution/scm/img/pc_inbound_im01.png';

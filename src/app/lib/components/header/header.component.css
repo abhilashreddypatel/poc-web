@@ -1,4 +1,4 @@
-.row {
+/* .row {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -12,4 +12,60 @@
 .logo {
   width: 50px;
   height: 50px;
+} */
+
+ul.navbar-nav a:hover {
+  color: var(--Green) !important;
+  /* background-color: white; */
+}
+
+div a button {
+  font-family: "Roboto Mono", monospace;
+  font-size: medium;
+  border: 1px solid #40ffd2;
+}
+
+div a button:hover {
+  /* background-color: #152b49 !important; */
+  background-color: whitesmoke;
+}
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.57s;
+  box-shadow: 0px 5px #0202021f;
+  /* background-color: #0a192fc2; */
+  background-color: white;
+  font-family: "Roboto Mono", monospace;
+  font-weight: bold;
+  font-size: small;
+  backdrop-filter: blur(13.5px);
+  z-index: 10;
+  animation-name: navPullDown;
+  animation-duration: 1.6s;
+  animation-delay: 2.5s;
+}
+@keyframes navPullDown {
+  0% {
+    top: -100px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+#imglogo {
+  transition: all 0.5s;
+}
+
+#imglogo:hover {
+  transform: scale(1.11);
+}
+
+/* Set the border color to the desired color */
+.custom-toggler.navbar-toggler {
+  border-color: #64ffda;
+  border-width: 0.18em;
 }

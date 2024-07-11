@@ -1,5 +1,44 @@
-<div class="row">
+<!-- <div class="row">
   <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGegEfDSfEdPtqmPpymgFSaEI7im1qY6ilzg&s"
     alt="">
   <button class="dropdown button-35" routerLink='/home'>WAREHOSE MANAGEMENT</button>
-</div>
+</div> -->
+
+<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+  <img src="assets/a.png" alt="Logo" class="logo">
+
+  <div class="container-fluid px-md-3">
+    <a href="#allProjectsDiv" data-toggle="tooltip" data-placement="bottom" title="See all works!"><img
+        [src]="imgPathNav" style="height: 50px;width: 130px; margin-left: 8%;" id="imglogo" alt="Oops"></a>
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+  <div class="collapse navbar-collapse px-md-3 " id="navbarSupportedContent" style="margin-right: 3%;">
+    <ul class="navbar-nav mb-2 align-items-center" style="margin-top: 10px;">
+      <li class="px-md-1 ps-3 py-md-1 mx-auto my-auto" style="width:max-content;">
+        <a class="nav-link active" href="#aboutDiv" style="color: var(--LightestSlate)"> <span
+            style="color: var(--Green);"> </span> CJM </a>
+      </li>
+      <li class="px-md-1 ps-3 py-md-1 mx-auto my-auto" style="width:max-content;">
+        <a class="nav-link active" href="#workDiv" style="color: var(--LightestSlate);"><span
+            style="color: var(--Green);"> </span> CAPABILITIES </a>
+      </li>
+      <li class="px-md-1 ps-3 py-md-1 mx-auto my-auto" style="width:max-content;">
+        <a class="nav-link active" href="#myProjectDiv" routerLink="/valuestreams"
+          style="color: var(--LightestSlate);"><span style="color: var(--Green);"> </span> VALE STREAMS </a>
+      </li>
+      <li class="px-md-1 ps-3 py-md-1 mx-auto my-auto" style="width:max-content;">
+        <a class="nav-link active" href="#contactDiv" style="color: var(--LightestSlate);"><span
+            style="color: var(--Green);">=> </span> TBD </a>
+      </li>
+    </ul>
+    <div class="container" style="text-align: center;">
+      <a href="" class="ps-4 py-md-1" target="_blank">
+        <button class="btn btn-outline-success" type="button" style="color: var(--Green);">Help</button>
+      </a>
+    </div>
+  </div>
+</nav>

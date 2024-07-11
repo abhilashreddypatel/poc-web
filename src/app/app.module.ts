@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InventoryModule } from './lib/inventory.module';
+import { SideBarsComponent } from './lib/components/side-bars/side-bars.component';
 
 @NgModule({
   declarations: [AppComponent],

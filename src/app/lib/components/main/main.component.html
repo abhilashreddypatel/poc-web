@@ -1,6 +1,5 @@
-<body>
-    <header routerLink="/home">Home</header>
-    <div class="grid">
+<body class="container">
+    <div class="grid ">
 
         <div class="valustream">
             <p style="font-weight: bold; padding-left: 20px;">SELECT VALUE STREAM</p>
@@ -26,7 +25,7 @@
                 <div *ngFor="let data of servicesItems">
                     <img style="display: block; margin: auto;" src="{{data.url}}">
                     <div *ngIf="data.label === 'INBOUND-MANAGEMENT'">
-                        <button class="button-57" style="text-align: center;"
+                        <button class="button-57" style="text-align: center;" (click)="redirect(data.label)"
                             alt="Click to Redirect">{{data.label}}</button>
                     </div>
                 </div>

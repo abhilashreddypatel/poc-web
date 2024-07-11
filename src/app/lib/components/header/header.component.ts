@@ -7,9 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  showSubmenu = false;
+  imgPathNav: string;
 
-  toggleSubmenu() {
-    this.showSubmenu = !this.showSubmenu;
+  constructor() {
+    this.imgPathNav = 'assets/images/a.png';
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        // document.getElementById("navbar").style.top = "0";
+      } else {
+        // document.getElementById("navbar").style.top = "-100px";
+      }
+      prevScrollpos = currentScrollPos;
+    };
   }
 }
